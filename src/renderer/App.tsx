@@ -22,7 +22,7 @@ function Hello() {
             Read our docs
           </button>
         </a>
-        <p style={{ color: 'blue' }}>Hello from Member B</p> 
+        <p style={{ color: 'blue' }}>Hello from Member B</p>
         <a
           href="https://github.com/sponsors/electron-react-boilerplate"
           target="_blank"
