@@ -34,7 +34,7 @@ function Hello() {
             Donate
           </button>
         </a>
-        <button onClick={() => alert('Member A clicked!')}>Button from Member A</button>
+        <button>Button from Member A</button>
       </div>
     </div>
   );
