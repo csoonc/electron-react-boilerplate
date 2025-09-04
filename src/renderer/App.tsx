@@ -34,7 +34,7 @@ function Hello() {
             Donate
           </button>
         </a>
-        <button>Button from Member A</button>
+        <button type="button">Button from Member A</button>
       </div>
     </div>
   );
