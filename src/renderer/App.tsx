@@ -34,7 +34,7 @@ function Hello() {
             </span>
             Donate
           </button>
-          <button>Hello from Leader!</button>
+          <button> type="button">Hello from Leader!</button>
         </a>
         <div>
           <p>Hello From Member C</p>
@@ -45,6 +45,7 @@ function Hello() {
             height="130"
           />
         </div>
+        <button type="button">Button from Member A</button>
       </div>
     </div>
   );
