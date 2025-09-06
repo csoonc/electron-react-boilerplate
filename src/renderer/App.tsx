@@ -34,7 +34,7 @@ function Hello() {
             </span>
             Donate
           </button>
-          <button> type="button">Hello from Leader!</button>
+          <button type="button">Hello from Leader!</button>
         </a>
         <div>
           <p>Hello From Member C</p>
