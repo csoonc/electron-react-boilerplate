@@ -22,6 +22,7 @@ function Hello() {
             Read our docs
           </button>
         </a>
+        <p style={{ color: 'blue' }}>Hello from Member B</p>
         <a
           href="https://github.com/sponsors/electron-react-boilerplate"
           target="_blank"
@@ -33,7 +34,17 @@ function Hello() {
             </span>
             Donate
           </button>
+          <button> type="button">Hello from Leader!</button>
         </a>
+        <div>
+          <p>Hello From Member C</p>
+          <img
+            src="https://th.bing.com/th/id/R.d2e66be4233b0492525670c83259120e?rik=4fbG6NZQPHSFCQ&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fa%2f3%2f3%2f9625.jpg&ehk=NOH3uXyGuW%2fMGsQLmAs9Qs9DKRygRCs10U52HGYh4rI%3d&risl=&pid=ImgRaw&r=0"
+            alt="memes dog"
+            width="150"
+            height="130"
+          />
+        </div>
         <button type="button">Button from Member A</button>
       </div>
     </div>
