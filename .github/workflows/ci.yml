@@ -1,0 +1,34 @@
+name: CI Pipeline
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+  pull_request:
+    branches:
+      - main
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Build the application
+        run: npm run build
+      - name: Run tests with coverage
+        run: npm test -- --coverage
+      - name: Package the application
+        run: npm run package
+      - name: Simulate Deployment
+        run: echo "Deployment simulated (e.g., Docker build/push would go here)"
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage/  # Uploads test coverage for report
