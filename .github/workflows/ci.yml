@@ -3,20 +3,21 @@ on: [push, pull_request]
 jobs:
   build-test-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15  # Fix cancels/timeouts
+    timeout-minutes: 15 
     steps:
-      - uses: actions/checkout@v4  # Update to v4
-      - uses: actions/setup-node@v4  # Update to v4
+      - uses: actions/checkout@v4 
+      - uses: actions/setup-node@v4  
         with: { node-version: 18 }
       - run: npm install
-      - run: npx update-browserslist-db@latest  # Fix deps warning
-      - run: npm run lint -- --fix  # Fix lint/Prettier
+      - run: npx update-browserslist-db@latest 
+      - run: npx prettier --write src/ 
+      - run: npm run lint -- --fix
       - run: npm run build
       - run: npm test -- --coverage
       - run: npm run package
       - name: Simulate Deploy
         run: echo "Deployment would happen here"
-      - uses: actions/upload-artifact@v4  # Fix deprecation (v4)
+      - uses: actions/upload-artifact@v4
         with:
           name: coverage-report
           path: coverage/
