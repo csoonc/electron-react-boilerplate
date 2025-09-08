@@ -20,7 +20,9 @@ describe('Hello page UI elements', () => {
     render(<App />);
 
     // the button
-    const leaderBtn = screen.getByRole('button', { name: /hello from leader!/i });
+    const leaderBtn = screen.getByRole('button', {
+      name: /hello from leader!/i,
+    });
     expect(leaderBtn).toBeInTheDocument();
 
     // the closest anchor should be the sponsors link
@@ -28,7 +30,7 @@ describe('Hello page UI elements', () => {
     expect(sponsorsLink).toBeInTheDocument();
     expect(sponsorsLink).toHaveAttribute(
       'href',
-      'https://github.com/sponsors/electron-react-boilerplate'
+      'https://github.com/sponsors/electron-react-boilerplate',
     );
     expect(sponsorsLink).toHaveAttribute('target', '_blank');
     expect(sponsorsLink).toHaveAttribute('rel', 'noreferrer');
@@ -53,7 +55,7 @@ describe('Hello page UI elements', () => {
     expect(docsLink).toBeInTheDocument();
     expect(docsLink).toHaveAttribute(
       'href',
-      'https://electron-react-boilerplate.js.org/'
+      'https://electron-react-boilerplate.js.org/',
     );
     expect(docsLink).toHaveAttribute('target', '_blank');
     expect(docsLink).toHaveAttribute('rel', 'noreferrer');
@@ -68,7 +70,7 @@ describe('Hello page UI elements', () => {
     expect(donateLink).toBeInTheDocument();
     expect(donateLink).toHaveAttribute(
       'href',
-      'https://github.com/sponsors/electron-react-boilerplate'
+      'https://github.com/sponsors/electron-react-boilerplate',
     );
     expect(donateLink).toHaveAttribute('target', '_blank');
     expect(donateLink).toHaveAttribute('rel', 'noreferrer');
